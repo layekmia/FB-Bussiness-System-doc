@@ -761,13 +761,20 @@ Order-এর progress visual timeline আকারে দেখাবে:
 ## Admin Dashboard Sidebar
 
 ### 1. Dashboard
-- Overview
-- Sales summary
-- Order summary
-- Revenue
-- Low stock
-- Recent orders
-- Important alerts
+### 1. Overview
+Total sales, Total revenue, Total orders, Total customers, Total products, Pending orders, Low stock products
+### 2. Sales Summary
+Today's sales, Sales by date range, Order count, Average order value, Sales trend
+### 3. Order Summary
+Pending orders, Processing orders, Shipped orders, Delivered orders, Cancelled orders, Returned orders
+### 4. Revenue Summary
+Today's revenue, Revenue by date range, Order count, Total revenue
+### 5. Low Stock Summary
+Low stock products, Out-of-stock products, Current stock quantity, Stock threshold, View Product
+### 6. Recent Orders
+Order number, Customer name, Order date, Total amount, Payment status, Order status, View Order button
+### 7. Quick Actions
+Add Product, View Orders, Add Coupon, Create Landing Page
 
 ### 2. Orders
 - All Orders
@@ -883,3 +890,143 @@ Order-এর progress visual timeline আকারে দেখাবে:
 - Security
 - Logout
 
+
+## Landing Page System
+
+### 43. Landing Page Template Library
+- ৪–৫টি ready-made landing page design
+- প্রতিটি template-এর আলাদা layout/design
+- Template preview
+- Template selection
+
+### 44. Predefined Section Library
+- প্রায় ১০টি reusable section
+- Hero section
+- Product section
+- Features section
+- Offer section
+- Testimonial section
+- FAQ section
+- Video section
+- Gallery section
+- Order Form section
+- Footer section
+
+### 45. Landing Page Creation
+- Landing page name
+- Template selection
+- Product selection
+- Initial section setup
+- Save as draft
+
+### 46. Section Enable / Disable
+- Available sections list
+- Section enable
+- Section disable
+- Section visibility status
+
+### 47. Section Content Editing
+- Text editing
+- Image selection/upload
+- Product selection
+- Offer information
+- Button text/link
+- Section-specific content
+
+### 48. Landing Page Preview
+- Desktop preview
+- Mobile preview
+- Full page preview
+- Preview before publish
+
+### 49. Custom Slug
+- Custom URL slug
+- Slug availability validation
+- Duplicate slug prevention
+- Slug update
+
+### 50. Publish / Unpublish
+- Publish landing page
+- Unpublish landing page
+- Draft status
+- Published status
+- Published page access
+
+### 51. Landing Page Order Integration
+- Landing page order form
+- Customer information collection
+- Product/order information
+- Order creation
+- Fraud-check integration
+- Order processing integration
+- Courier workflow integration
+
+## Fake Order Prevention
+
+### 35. Risk Check Engine
+- Customer information check
+- Phone number check
+- Address information check
+- Previous order history
+- Previous return/cancel history
+- Order pattern analysis
+- Risk rule evaluation
+
+### 36. Risk Score / Order Flagging
+- Risk score calculation
+- Risk level
+- Risk reasons
+- Order flagging
+- Risk status
+
+### 37. Manual Review Queue
+- Flagged order list
+- Risk details
+- Customer/order information
+- Approve order
+- Reject order
+- Review status
+- Admin review notes
+
+### 38. Customer Verification
+- Verification request
+- Phone verification
+- Customer confirmation
+- Verification status
+- Verification result
+- Verified / Failed status
+
+## Courier Automation
+
+### 39. Courier Account Connection
+- Courier selection
+- Courier account/API credentials
+- Connect courier account
+- Connection status
+- Disconnect courier account
+- Multiple courier support
+
+### 40. Courier Booking
+- Eligible order selection
+- Courier selection
+- Automatic booking
+- Booking status
+- Consignment/tracking ID
+- Booking failure handling
+
+### 41. Courier Tracking
+- Tracking ID
+- Courier name
+- Tracking status
+- Shipment information
+- Tracking link
+- Delivery information
+
+### 42. Courier Status Sync
+- Courier status retrieval
+- Automatic order status update
+- Shipped status
+- Out for delivery status
+- Delivered status
+- Cancelled/returned status
+- Sync failure handling
