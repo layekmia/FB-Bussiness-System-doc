@@ -189,7 +189,6 @@ Project-এর জন্য প্রয়োজনীয় environment variables �
 
 - Customer authentication
 - Admin authentication
-- Staff authentication
 - Role-based access
 
 implement করার foundation থাকবে।
@@ -230,6 +229,7 @@ implement করার foundation থাকবে।
 - [ ] Project foundation পরবর্তী feature development-এর জন্য ready
 
 ## 02. Customer-Facing Storefront
+
 #### Homepage: 
     1. Header / Navigation 
         01. Logo
@@ -397,6 +397,8 @@ implement করার foundation থাকবে।
 - Guest wishlist stored locally
 - Guest wishlist merge after login
 
+## 05. Cart & Checkout ==========================
+
 ## Add to Cart
 
 ### 1. Add Product
@@ -437,6 +439,447 @@ implement করার foundation থাকবে।
 - Product added confirmation
 - Out-of-stock message
 - Quantity limit message
-        
 
+### 23. Coupon / Discount
+
+- Discount code apply
+- Percentage discount
+- Fixed amount discount
+- Coupon expiry
+- Usage limit
+- Minimum order amount
+- Coupon validation
+- Remove applied coupon
+
+### 24. Checkout
+
+- Customer information
+- Phone number
+- Delivery address
+- Saved address selection
+- Shipping method
+- Delivery charge
+- Order summary
+- Coupon/discount summary
+- Final payable amount
+- Order notes
+- Place Order
+
+
+### 25. Payment Methods
+
+- Cash on Delivery (COD)
+- Online payment
+- Payment method selection
+- Payment status
+- Payment verification
+- Failed payment handling
+
+
+### 26. Order Confirmation page
+
+- Order success message
+- Order number
+- Order summary
+- Customer information
+- Delivery address
+- Payment method
+- Total amount
+- Estimated delivery information
+- View Order button
+- Continue Shopping button
+
+## My Orders Page
+
+### 1. Order List
+- Order number
+- Order date
+- Product summary
+- Total amount
+- Payment status
+- Order status
+
+### 2. Order Status
+- Pending
+- Confirmed
+- Processing
+- Shipped
+- Delivered
+- Cancelled
+- Returned
+
+### 3. Order Actions
+- View Order
+- Track Order
+- Cancel Order (if eligible)
+- Reorder
+
+### 4. Order Details
+- Product details
+- Quantity
+- Price
+- Delivery address
+- Payment method
+- Order summary
+- Order timeline
+
+### 5. Order Filtering
+- All Orders
+- Active Orders
+- Delivered
+- Cancelled
+- Returned
+
+### 6. Empty State
+- No orders message
+- Continue Shopping button
+
+## Order Tracking Page
+
+### 1. Page Access
+- Homepage navigation-এ Track Order menu
+- Login ছাড়াই order tracking
+- Direct URL দিয়ে access করা যাবে
+
+### 2. Order Search
+- Order number input
+- Search / Track Order button
+- Order number validation
+- Invalid order number message
+- Empty input validation
+
+### 3. Empty State
+Page open করলে কোনো order information দেখাবে না।
+
+### 4. Order Tracking Result
+
+Valid order number দিলে:
+
+- Order number
+- Order date
+- Customer name
+- Product summary
+- Total amount
+- Payment status
+- Current order status
+
+### 5. Order Status Timeline
+
+Order-এর progress visual timeline আকারে দেখাবে:
+
+- Order Placed
+- Confirmed
+- Processing
+- Shipped
+- Out for Delivery
+- Delivered
+
+প্রতিটি status-এর:
+- Status name
+- Date/time
+- Current status indicator
+
+### 7. Order Summary
+- Ordered products
+- Product quantity
+- Product price
+- Delivery charge
+- Discount
+- Total amount
+
+### 8. Order Status Messages
+বর্তমান status অনুযায়ী customer-কে short informative message দেখানো হবে।
+
+### 9. Privacy & Security
+- Login ছাড়া শুধু order number দিয়ে প্রয়োজনীয় tracking information দেখানো হবে।
+- Sensitive customer information প্রকাশ করা হবে না।
+- Invalid বা non-existent order number-এর ক্ষেত্রে order information দেখানো হবে না।
+
+### 10. Mobile Experience
+- পুরো tracking page mobile-friendly হবে।
+- Search এবং tracking timeline mobile screen-এর জন্য optimized থাকবে।
+
+
+### Guest Checkout & Automatic Account Creation
+
+#### 1. Guest Checkout
+- Logged-out user কোনো account ছাড়াই order করতে পারবে
+- Checkout page-এ customer-এর প্রয়োজনীয় information দিতে পারবে
+- Login বা account create করা বাধ্যতামূলক হবে না
+
+#### 2. Checkout Information
+- Customer name
+- Phone number
+- Email (optional/required based on store settings)
+- Delivery address
+- Shipping method
+- Payment method
+- Order summary
+
+#### 3. Automatic Account Creation
+- Guest checkout complete করার সময় customer-এর জন্য automatically account তৈরি হবে
+- Customer-এর provided phone/email account-এর সাথে যুক্ত হবে
+- Existing account থাকলে নতুন account তৈরি না করে existing account-এর সাথে order link হবে
+- Customer-এর order automatically তার account-এর order history-তে যুক্ত হবে
+
+#### 4. Account Access
+- Order successfully placed হওয়ার পর customer account পাওয়ার information দেখানো হবে
+- Customer পরবর্তীতে account-এ login করে order history, address এবং profile দেখতে পারবে
+- Account access-এর জন্য প্রয়োজনীয় login/verification method ব্যবহার করা হবে
+
+#### 5. Order Confirmation
+- Order confirmation page দেখানো হবে
+- Order number
+- Order summary
+- Delivery information
+- Account access information
+
+#### 6. Guest Order Security
+- Guest order-এর customer information secure রাখতে হবে
+- Duplicate account তৈরি prevent করতে হবে
+- Existing customer account থাকলে সঠিক account identify করতে হবে
+
+## Profile / Account Settings
+
+### 1. Profile Information
+- Profile image
+- Name
+- Email
+- Phone number
+
+### 2. Edit Profile
+- Update name
+- Update phone number
+- Update email address
+- Update profile image
+
+### 3. Password & Security
+- Change password
+- Current password verification
+- New password
+- Confirm new password
+- Password validation
+
+### 4. Account Information
+- Account creation date
+- Account status
+
+### 5. Account Actions
+- Logout
+- Delete account
+
+## Address Book
+
+### 1. Saved Addresses
+- Address list
+- Recipient name
+- Phone number
+- Full address
+- Address type (Home/Office/Other)
+- Default address indicator
+
+### 2. Add Address
+- Recipient name
+- Phone number
+- Division
+- District
+- Area/City
+- Full address
+- Address type
+- Set as default address
+
+### 3. Edit Address
+- Update address information
+- Change address type
+- Set as default address
+
+### 4. Address Actions
+- Edit address
+- Delete address
+- Set as default
+
+### 5. Default Address
+- One default delivery address
+- Automatically selected during checkout
+- Customer can change default address
+
+### 6. Empty State
+- No saved address message
+- Add New Address button
+
+## Review & Rating
+
+### 1. Review Eligibility
+- শুধুমাত্র logged-in customer review দিতে পারবে
+- যেকোনো product review করা যাবে
+- Website থেকে product purchase করা বাধ্যতামূলক নয়
+- একই customer একই product-এর জন্য একটি review দিতে পারবে
+
+### 2. Submit Review
+- Star rating (1–5)
+- Review title
+- Review comment
+- Product photo upload
+- Review submit button
+
+### 3. Review Management
+- Customer নিজের review দেখতে পারবে
+- নিজের review edit করতে পারবে
+- নিজের review delete করতে পারবে
+
+### 4. Review Display
+- Average rating
+- Total review count
+- Rating breakdown
+- Customer name
+- Rating
+- Review date
+- Review comment
+- Review photos
+
+### 5. Review Moderation
+- নতুন review প্রথমে pending থাকবে
+- Admin review approve/hide করতে পারবে
+- Inappropriate review remove করতে পারবে
+
+### 6. Review Sorting & Filtering
+- Most recent
+- Highest rating
+- Lowest rating
+- Photo reviews
+
+### 7. Empty State
+- কোনো review না থাকলে empty review message
+- Write a Review button
+
+### 8. Review Badge
+- Website order থেকে verified purchase হলে review-এর পাশে **Verified Purchase** badge দেখানো হবে
+- External purchase বা non-verified review-এ badge থাকবে না
+
+
+## Admin Dashboard ===================================================
+## Admin Dashboard Sidebar
+
+### 1. Dashboard
+- Overview
+- Sales summary
+- Order summary
+- Revenue
+- Low stock
+- Recent orders
+- Important alerts
+
+### 2. Orders
+- All Orders
+- Pending
+- Processing
+- Confirmed
+- Shipped
+- Delivered
+- Cancelled
+- Returned
+- Order Search / Filters
+
+### 3. Products
+- All Products
+- Add Product
+- Categories
+- Brands
+- Product Variants
+- Inventory
+- Low Stock
+- Bulk Import
+- Media Library
+
+### 4. Customers
+- All Customers
+- Customer Details
+- Order History
+- Customer Search / Filters
+
+### 5. Fake Order Prevention
+- Risky Orders
+- Manual Review
+- Verification Queue
+- Fraud / Risk Rules
+- Customer Risk History
+
+### 6. Courier
+- Courier Dashboard
+- Courier Accounts
+- Shipments
+- Booking Queue
+- Tracking
+- Delivery Status
+- Returned Orders
+
+### 7. Landing Pages
+- All Landing Pages
+- Create Landing Page
+- Templates
+- Sections
+- Drafts
+- Published Pages
+
+### 8. Reviews
+- All Reviews
+- Pending Reviews
+- Approved Reviews
+- Hidden Reviews
+
+### 9. Discounts & Coupons
+- All Coupons
+- Create Coupon
+- Active Coupons
+- Expired Coupons
+
+### Appearance / Storefront
+
+- Banners & Sliders
+  - Homepage banners
+  - Promotional banners
+  - Slider management
+
+- Navigation / Menus
+  - Header menu
+  - Footer links
+  - Menu order / visibility
+
+- Pages (CMS)
+  - About Us
+  - Contact Us
+  - Privacy Policy
+  - Terms & Conditions
+  - Other static pages
+
+### 10. Reports & Analytics
+- Sales Analytics
+- Orders Analytics
+- Product Performance
+- Customer Analytics
+- Revenue Reports
+- Courier / Delivery Reports
+
+### 11. Notifications
+- Notification Center
+- Notification Templates
+- Notification Settings
+- Notification History
+
+### 13. Store Settings
+- General Settings
+- Store Information
+- Currency
+- Shipping Settings
+- Payment Settings
+- Tax Settings
+- Notification Settings
+- Social Links
+- SEO Settings
+
+### 14. Admin Profile
+- My Profile
+- Account Settings
+- Security
+- Logout
 
